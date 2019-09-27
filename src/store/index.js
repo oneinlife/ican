@@ -1,5 +1,5 @@
-import FlatsStore from './flats';
+import EntityStore from './entity';
 
 export default {
-  flatsStore: new FlatsStore(),
+  entityStore: new EntityStore(),
 };
