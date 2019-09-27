@@ -1,4 +1,5 @@
 import {h, render} from 'preact';
+import connect from '@vkontakte/vk-connect';
 import App from './App';
 import store from './store';
 import { Provider } from 'mobx-preact';
@@ -14,6 +15,9 @@ if (__DEV__) {
 }
 
 let root = null;
+
+connect.send("VKWebAppInit", {});
+connect.subscribe((e) => console.log(e));
 
 function bootstrap (App) {
   root = render((

@@ -1,4 +1,7 @@
 const path = require('path');
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
 const express = require('express');
 const webpack = require('webpack');
 const config = require('../config');
@@ -46,11 +49,30 @@ app.use(hotMiddleware);
 // serve pure static assets
 const staticPath = path.posix.join('/', 'static');
 app.use('/static', express.static('static'));
-
-module.exports = app.listen(port, function (err) {
+app.use('/ssl', express.static('ssl'));
+/*
+app.listen(port, function (err) {
   if (err) {
     console.log(err);
     return;
   }
   console.log('Listening at http://localhost:' + port + '\n');
-});
+});*/
+
+
+
+// your express configuration here
+var key = path.join(__dirname, '../ssl/server.key');
+var cert = path.join(__dirname, '../ssl/server.cert');
+
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(
+  {
+    key: fs.readFileSync(key, 'utf8'),
+    cert: fs.readFileSync(cert, 'utf8'),
+  },
+  app
+);
+
+httpServer.listen(8080);
+httpsServer.listen(8443);
