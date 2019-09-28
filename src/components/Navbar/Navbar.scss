@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+  line-height: 12px;
+  position: sticky;
+  bottom: 0;
+  height: 50px;
+  background-color: #fff;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
