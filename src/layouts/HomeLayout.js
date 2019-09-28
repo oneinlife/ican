@@ -1,11 +1,11 @@
 import { h } from 'preact';
 import style from 'styles/home-layout.scss';
-import FlatsList from 'components/FlatsList/FlatsList';
+import EntityList from 'components/EntityList/EntityList';
 
 function HomeLayout () {
   return (
     <div className={style.wrapper}>
-      <FlatsList />
+      <EntityList />
     </div>
   );
 }
