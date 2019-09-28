@@ -20,19 +20,19 @@ class Navbar extends Component {
   render() {
     return (
       <nav class={s.root} >
-        <Link href='/' class={s.item} activeClassName={s.active}>
+        <Link href='/future' class={s.item} activeClassName={s.active}>
           <News /><div>Новости</div>
         </Link>
         <Link href='/' class={s.item} activeClassName={s.active}>
           <Event /><div>Мероприятия</div>
         </Link>
-        <Link href='/' class={s.item} activeClassName={s.active}>
+        <Link href='/future' class={s.item} activeClassName={s.active}>
           <Man /><div>Волонтеры</div>
         </Link>
         <Link href='/account' class={s.item} activeClassName={s.active}>
           <Person /><div>Личный кабинет</div>
         </Link>
-        <Link href='/' class={s.item} activeClassName={s.active}>
+        <Link href='/future' class={s.item} activeClassName={s.active}>
           <QRcode /><div>QR-код</div>
         </Link>
       </nav>
