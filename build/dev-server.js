@@ -73,5 +73,5 @@ var httpsServer = https.createServer(
   app
 );
 
-httpServer.listen(proces.env.port || 80);
-httpsServer.listen(proces.env.sslport || 443);
+httpServer.listen(process.env.port || 80);
+httpsServer.listen(process.env.sslport || 443);
