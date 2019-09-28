@@ -62,8 +62,8 @@ app.listen(port, function (err) {
 
 
 // your express configuration here
-var key = path.join(__dirname, '../ssl/server.key');
-var cert = path.join(__dirname, '../ssl/server.cert');
+var key = path.join(__dirname, '../ssl/key.pem');
+var cert = path.join(__dirname, '../ssl/server.crt');
 
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(
