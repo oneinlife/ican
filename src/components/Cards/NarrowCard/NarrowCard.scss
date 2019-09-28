@@ -1,14 +1,27 @@
 .root {
-    display: flex;
-    margin: 0 -15px;
-    padding: 0 15px;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  .title {
+  margin: 0 -15px;
+  padding: 0 15px;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  .wrap {
+    width: auto;
+    margin: .625rem -0.9375rem -.9375rem;
+    padding: 0 .9375rem .9375rem;
+    overflow-y: auto;
+    white-space: nowrap;
+
+    .card {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      .title {
+  
+      }
     
-  }
-
-  .description {
-
+      .description {
+    
+      }
+    }
   }
 }
