@@ -24,11 +24,10 @@ class EntityList extends Component {
 
   render({ entityStore }) {
     const { entity } = entityStore;
-    const id = 0;
     return (
       <div class={s.root}>
-        {entity && entity.map(({ entity: ee, date_start, date_end, img, place }) => (
-          <Link href={`/entity/${id}`}>
+        {entity && entity.map(({ id, entity: ee, date_start, date_end, img, place }) => (
+          <Link class={s.list} href={`/entity/${id}`}>
             <div class={s.card}>
               {img &&
                 <img class={s.cardImg} src={`static/${img}`} />
