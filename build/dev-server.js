@@ -2,6 +2,7 @@ const path = require('path');
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
+var compression = require('compression');
 const express = require('express');
 const webpack = require('webpack');
 const config = require('../config');
@@ -14,6 +15,7 @@ const webpackConfig = require('../webpack.config.babel');
 // var proxyTable = config.dev.proxyTable;
 
 const app = express();
+app.use(compression())
 const compiler = webpack(webpackConfig);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
