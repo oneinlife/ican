@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import s from './Header.scss';
+import Icon from './icon.svg';
 
 class Header extends Component {
 
@@ -14,10 +15,7 @@ class Header extends Component {
   render() {
     return (
       <div class={s.root} >
-        <span class={s.title}>Воздух Недвижимость</span>
-        <div>
-          <span>Поиск</span>
-        </div>
+        <Icon />
       </div>
     );
   }

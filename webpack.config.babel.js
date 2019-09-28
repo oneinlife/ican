@@ -52,9 +52,11 @@ const postCssLoaderOptions = {
   parser: 'postcss-scss',
   modules: true,
   plugins: () => [
-    require('postcss-import')({resolve: resolver({
-      alias: { styles: path.resolve(__dirname, 'src/styles')}
-    })}),
+    require('postcss-import')({
+      resolve: resolver({
+        alias: { styles: path.resolve(__dirname, 'src/styles') }
+      })
+    }),
     require('precss')(),
     // Generate pixel fallback for "rem" units, e.g. div { margin: 2.5rem 2px 3em 100%; }
     // https://github.com/robwierzbowski/node-pixrem
@@ -92,7 +94,10 @@ const loaders = [
   { test: /\.otf(\?.*)?$/, loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype' },
   { test: /\.ttf(\?.*)?$/, loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream' },
   { test: /\.eot(\?.*)?$/, loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]' },
-  { test: /\.svg(\?.*)?$/, loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml' },
+  {
+    test: /\.svg$/,
+    use: ['preact-svg-loader'],
+  },
   { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
 ];
 
@@ -105,7 +110,7 @@ const plugins = [
     filename: root('./dist/index.html'),
     title: 'Preact Starter',
     inject: 'head',
-    hash:true,
+    hash: true,
   }),
   new ScriptExtHtmlWebpackPlugin({
     module: /\.js$/
