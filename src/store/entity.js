@@ -9,7 +9,7 @@ class EntityStore {
   @observable entity = [];
   @action
   load() {
-    axios.get(path || 'https://194.58.104.250:3443')
+    axios.get(path || 'https://icanapp.ml:3443')
     .then(({ data }) => {
       this.entity = data.entity;
     })
