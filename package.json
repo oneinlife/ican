@@ -34,7 +34,7 @@
     "prod": {
       "command": "babel-node build/dev-server.js",
       "env": {
-        "NODE_ENV": "production",
+        "NODE_ENV": "production"
       }
     }
   },
