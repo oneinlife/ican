@@ -1,0 +1,32 @@
+@import '~styles/variables.scss';
+
+.root {
+  padding: 0 0.5rem;
+}
+
+.card {
+  background-color: $main-bg;
+  border: 1px solid $color-grey;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.cardImg {
+  width:100%;
+}
+
+.cardParams {
+  padding: 1rem;
+}
+
+.cardName {
+  color: #45224D;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.other {
+  letter-spacing: -0.078px;
+  color: rgba(69, 34, 77, 0.6);
+}

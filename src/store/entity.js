@@ -9,9 +9,9 @@ class EntityStore {
   @observable entity = [];
   @action
   load() {
-    axios.get(path || 'https://icanapp.ml:3443')
+    axios.get(path || 'https://icanapp.ml:3443/entity')
     .then(({ data }) => {
-      this.entity = data.entity;
+      this.entity = data.entitys;
     })
   }
 }
