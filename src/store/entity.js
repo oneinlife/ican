@@ -7,10 +7,9 @@ console.log(path)
 @bind
 class EntityStore {
   @observable entity = [];
-
   @action
   load() {
-    axios.get(path || '194.58.104.250:3000')
+    axios.get(path || 'http://194.58.104.250:3000')
     .then(({ data }) => {
       this.entity = data.entity;
     })
