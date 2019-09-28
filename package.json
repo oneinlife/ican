@@ -26,6 +26,8 @@
     "start": {
       "command": "babel-node build/dev-server.js",
       "env": {
+        "port": "8080",
+        "sslport": "8443",
         "NODE_ENV": "development"
       }
     },
