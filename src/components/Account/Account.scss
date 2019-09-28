@@ -1,0 +1,24 @@
+.root {
+  .header {
+    background: linear-gradient(90deg, #8E44AD 16.4%, #6D1393 100%);
+    opacity: 0.76;
+    color: #fff;
+    .points {
+      display: flex;
+      > div {
+        font-size: 48px;
+        line-height: 57px;
+        > span {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+    .description {
+
+    }
+    &Card {
+    
+    }
+  }
+}

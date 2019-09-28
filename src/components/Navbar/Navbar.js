@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { Link } from 'preact-router';
 import Event from './event.svg';
 import Man from './man.svg';
 import News from './news.svg';
@@ -18,16 +19,25 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div class={s.root} >
-        <div class={s.item}><News /><div>Новости</div></div>
-        <div class={s.item}><Event /><div>Мероприятия</div></div>
-        <div class={s.item}><Man /><div>Волонтеры</div></div>
-        <div class={s.item}><Person /><div>Личный кабинет</div></div>
-        <div class={s.item}><QRcode /><div>QR-код</div></div>
-      </div>
+      <nav class={s.root} >
+        <Link href='/' class={s.item} activeClassName={s.active}>
+          <News /><div>Новости</div>
+        </Link>
+        <Link href='/' class={s.item} activeClassName={s.active}>
+          <Event /><div>Мероприятия</div>
+        </Link>
+        <Link href='/' class={s.item} activeClassName={s.active}>
+          <Man /><div>Волонтеры</div>
+        </Link>
+        <Link href='/account' class={s.item} activeClassName={s.active}>
+          <Person /><div>Личный кабинет</div>
+        </Link>
+        <Link href='/' class={s.item} activeClassName={s.active}>
+          <QRcode /><div>QR-код</div>
+        </Link>
+      </nav>
     );
   }
 }
-
 
 export default Navbar
