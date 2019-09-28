@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "client",
+            "script": "npm",
+            "args" : "prod",
+            "env": {
+                "path": "194.58.104.250:3000"
+            }
+        }
+    ]
+}
