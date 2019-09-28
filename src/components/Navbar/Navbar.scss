@@ -1,3 +1,7 @@
+$color-bg: #fff;
+$color-default: #bb8fce;
+$color-active: #8e44ad;
+
 .root {
   display: flex;
   justify-content: space-around;
@@ -6,12 +10,18 @@
   position: sticky;
   bottom: 0;
   height: 50px;
-  background-color: #fff;
-}
+  background-color: $color-bg;
 
-.item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-default;
+    text-decoration: none;
+  }
+
+  .active {
+    color: $color-active;
+  }
 }

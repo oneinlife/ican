@@ -8,12 +8,17 @@ const getHomeLayout = () => {
   return import(/* webpackChunkName: "HomeLayout" */ 'layouts/HomeLayout').then(m => m.default)
 };
 
+const getAccountLayout = () => {
+  return import(/* webpackChunkName: "AccountLayout" */ 'layouts/AccountLayout').then(m => m.default)
+};
+
 function App() {
   return (
     <div>
       <Header />
       <Router>
         <AsyncRoute path='/' getComponent={getHomeLayout}/>
+        <AsyncRoute path='/account' getComponent={getAccountLayout}/>
       </Router>
       <Navbar />
     </div>
