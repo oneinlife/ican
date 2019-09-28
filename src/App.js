@@ -8,12 +8,17 @@ const getHomeLayout = () => {
   return import(/* webpackChunkName: "HomeLayout" */ 'layouts/HomeLayout').then(m => m.default)
 };
 
+const getEntityLayout = () => {
+  return import(/* webpackChunkName: "EntityLayout" */ 'layouts/EntityLayout').then(m => m.default)
+};
+
 function App() {
   return (
     <div>
       <Header />
       <Router>
         <AsyncRoute path='/' getComponent={getHomeLayout}/>
+        <AsyncRoute path="/entity/:id" getComponent={getEntityLayout}/>
       </Router>
       <Navbar />
     </div>
