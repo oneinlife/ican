@@ -10,9 +10,14 @@ const getHomeLayout = () => {
 
 const getAccountLayout = () => {
   return import(/* webpackChunkName: "AccountLayout" */ 'layouts/AccountLayout').then(m => m.default)
+}
 
 const getEntityLayout = () => {
   return import(/* webpackChunkName: "EntityLayout" */ 'layouts/EntityLayout').then(m => m.default)
+};
+
+const getFutureLayout = () => {
+  return import(/* webpackChunkName: "FutureLayout" */ 'layouts/FutureLayout').then(m => m.default)
 };
 
 function App() {
@@ -23,6 +28,7 @@ function App() {
         <AsyncRoute path='/' getComponent={getHomeLayout}/>
         <AsyncRoute path='/account' getComponent={getAccountLayout}/>
         <AsyncRoute path="/entity/:id" getComponent={getEntityLayout}/>
+        <AsyncRoute path="/future" getComponent={getFutureLayout}/>
       </Router>
       <Navbar />
     </div>
