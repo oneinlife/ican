@@ -11,7 +11,7 @@ class Entity{
   load(id) {
     axios.get(path || `https://icanapp.ml:3443/entity/${id}`)
     .then(({ data }) => {
-      this.entity = data.entity;
+      this.entity = data;
     })
   }
 }
