@@ -9,7 +9,7 @@ const config = require('../config');
 const webpackConfig = require('../webpack.config.babel');
 
 // default port where dev server listens for incoming traffic
-const port = process.env.PORT || config.dev.port || 8080;
+const port = process.env.PORT || config.dev.port || 80;
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
 // var proxyTable = config.dev.proxyTable;
@@ -74,5 +74,5 @@ var httpsServer = https.createServer(
   app
 );
 
-httpServer.listen(8080);
-httpsServer.listen(8443);
+httpServer.listen(80);
+httpsServer.listen(443);
