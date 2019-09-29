@@ -19,14 +19,9 @@ class Navbar extends Component {
   }
 
   qrInit() {
-    connect
-      .sendPromise('VKWebAppOpenQR')
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    if (connect.supports("VKWebAppOpenQR")) {
+      connect.send("VKWebAppOpenQR"});
+    }
   }
 
   render() {
