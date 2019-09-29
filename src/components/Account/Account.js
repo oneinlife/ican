@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import connect from '@vkontakte/vk-connect';
 import NarrowCard from '../Cards/NarrowCard/NarrowCard';
 import s from './Account.scss';
 
@@ -10,6 +11,17 @@ class Account extends Component {
 
   componentWillUnmount() {
     this.removeCss();
+  }
+
+  qrInit() {
+    connect.sendPromise("VKWebAppOpenQR")
+    .then(data => {
+      // Обработка события в случае успеха
+      console.log(data);
+    })
+    .catch(error => {
+      //Обработка событияв случае ошибки
+    });
   }
 
   render() {
@@ -37,6 +49,7 @@ class Account extends Component {
           </div>
           <NarrowCard cardText={cardText} />
         </div>
+        <div onClick={this.qrInit}>qr</div>
       </div>
     );
   }
