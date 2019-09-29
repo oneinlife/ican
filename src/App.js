@@ -32,6 +32,10 @@ class App extends Component {
       return import(/* webpackChunkName: "FutureLayout" */ 'layouts/FutureLayout').then(m => m.default)
     };
 
+    const getQRCodeLayout = () => {
+      return import(/* webpackChunkName: "getQRCodeLayout" */ 'layouts/QRCodeLayout').then(m => m.default)
+    };
+
     return (
       <div class={s.root}>
         <Header />
@@ -40,6 +44,7 @@ class App extends Component {
           <AsyncRoute path='/account' getComponent={getAccountLayout}/>
           <AsyncRoute path="/entity/:id" getComponent={getEntityLayout}/>
           <AsyncRoute path="/future" getComponent={getFutureLayout}/>
+          <AsyncRoute path="/qrcode" getComponent={getQRCodeLayout}/>
         </Router>
         <Navbar />
       </div>
