@@ -1,12 +1,11 @@
 import { h, Component } from 'preact';
 import { observer, inject } from 'mobx-preact';
-import s from './Participants'
+import s from './Participants.scss';
 
 
 @inject('participantsStore')
 @observer
 class Participants extends Component {
-
   componentWillMount() {
     this.removeCss = s._insertCss();
   }
@@ -14,7 +13,6 @@ class Participants extends Component {
   componentWillUnmount() {
     this.removeCss();
   }
-
   componentDidMount() {
     this.props.participantsStore.load();
   }
