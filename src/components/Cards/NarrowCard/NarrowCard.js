@@ -12,7 +12,6 @@ class NarrowCard extends Component {
   }
 
   render({ cardText }) {
-    console.log(cardText)
     return (
       <div class={s.root}>
         <div class={s.wrap}>
