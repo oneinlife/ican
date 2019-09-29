@@ -3,6 +3,9 @@ $color-default: #bb8fce;
 $color-active: #8e44ad;
 
 .root {
+  padding-bottom: 12px;
+  padding-bottom: constant(safe-area-inset-top, 12px);
+  padding-bottom: env(safe-area-inset-top, 12px);
   display: flex;
   justify-content: space-around;
   font-size: 10px;
