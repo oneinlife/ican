@@ -29,13 +29,13 @@ class Account extends Component {
       <div class={s.root} >
         <div class={s.header}>
           <div class={s.points}>
-            <div>301 <span>поинт</span></div>
+            <div>301<span>поинт</span></div>
             <button>Потратить</button>
           </div>
           <div class={s.description}>
             Вы получаете рейтинг за каждый совершенный поступок в приложении и участие в мероприятиях
           </div>
-          <NarrowCard cardText={cardText} class={s.headerCard} />
+          <NarrowCard cardText={cardText} />
         </div>
       </div>
     );

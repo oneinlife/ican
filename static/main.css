@@ -8,5 +8,7 @@ html {
 body {
   background-color: #E5E5E5;
   color: #333333;
-  
+  padding-top: 12px;
+  padding-top: constant(safe-area-inset-top, 12px);
+  padding-top: env(safe-area-inset-top, 12px);
 }

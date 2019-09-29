@@ -1,26 +1,39 @@
 .root {
-  margin: 0 -15px;
-  padding: 0 15px;
+  padding: 0 18px;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 
   .wrap {
     width: auto;
-    margin: .625rem -0.9375rem -.9375rem;
-    padding: 0 .9375rem .9375rem;
+    margin: 18px -18px -18px;
+    padding: 0 18px 18px;
     overflow-y: auto;
     white-space: nowrap;
 
     .card {
       position: relative;
       display: inline-block;
-      width: 300px;
+      width: 270px;
+      background-color: #fff;
+      color: #45224D;
+      padding: 15px;
+      margin-bottom: 18px;
+      border-radius: 8px;
       .title {
-  
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 8px;
       }
     
       .description {
-    
+        font-size: 14px;
+        line-height: 17px;
+        color: #8E44AD;
+        white-space: normal;
+      }
+
+      &:not(:first-child) {
+        margin-left: .9375rem;
       }
     }
   }
