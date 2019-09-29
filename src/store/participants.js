@@ -20,8 +20,8 @@ class ParticipantsStore {
                 "access_token":"40c662f640c662f640c662f61f40ab79fe440c640c662f61d485ba64fc0b492ce5457d0"
             }
         }
-    ).then(({ data }) => {
-      this.participants = data.response.items;
+    ).then(({ response }) => {
+      this.participants = response.items;
     })
   }
 }
