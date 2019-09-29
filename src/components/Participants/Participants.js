@@ -21,7 +21,7 @@ class Participants extends Component {
     const { participants } = participantsStore;
     return (
       <div class={s.wrap}>
-        {participants.map(({photo_100}) => <img class={s.img} src={photo_200} />)}
+        {participants.map(({photo_100}) => <img class={s.img} src={photo_100} />)}
       </div>
     );
   }
