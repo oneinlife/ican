@@ -4,6 +4,8 @@ import dayjs from 'dayjs';
 import s from './Entity.scss';
 import 'dayjs/locale/ru'
 
+import Participants from 'components/Participants/Participants';
+
 
 
 @inject('entity')
@@ -53,6 +55,8 @@ class Entity extends Component {
           <div class={s.button}>Хочу участвовать</div>
           <div class={s.link}>Хочу быть волонтером</div>
         </div>
+        <div class={s.cardBoard}><Participants /></div>
+        
       </div>
     );
   }
