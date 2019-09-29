@@ -14,13 +14,15 @@ class NarrowCard extends Component {
   render({ cardText }) {
     console.log(cardText)
     return (
-      <div class={s.root} >
-        {cardText.map(item => (
-          <div class={s.wrap}>
-            <div class={s.title}>{item.title}</div>
-            <div class={s.description}>{item.desc}</div>
-          </div>
-        ))}
+      <div class={s.root}>
+        <div class={s.wrap}>
+          {cardText.map(item => (
+            <div class={s.card}>
+              <div class={s.title}>{item.title}</div>
+              <div class={s.description}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

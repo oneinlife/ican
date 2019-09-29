@@ -7,9 +7,10 @@ $color-active: #8e44ad;
   justify-content: space-around;
   font-size: 10px;
   line-height: 12px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   height: 50px;
+  width: 100%;
   background-color: $color-bg;
 
   .item {
