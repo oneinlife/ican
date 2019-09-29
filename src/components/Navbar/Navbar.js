@@ -20,7 +20,7 @@ class Navbar extends Component {
 
   qrInit() {
     if (connect.supports("VKWebAppOpenQR")) {
-      connect.send("VKWebAppOpenQR"});
+      connect.send("VKWebAppOpenQR");
     }
   }
 
