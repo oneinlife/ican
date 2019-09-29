@@ -14,14 +14,14 @@ class ParticipantsStore {
         {
             "method": "groups.getMembers",
             "params": {
-                "fields": "photo_200",
+                "fields": "photo_100",
                 "v":"5.101",
                 "group_id": "187019586", 
                 "access_token":"40c662f640c662f640c662f61f40ab79fe440c640c662f61d485ba64fc0b492ce5457d0"
             }
         }
     ).then(({ data }) => {
-      this.participants = data.entitys;
+      this.participants = data.response.items;
     })
   }
 }
