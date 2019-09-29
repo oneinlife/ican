@@ -55,7 +55,10 @@ class Entity extends Component {
           <div class={s.button}>Хочу участвовать</div>
           <div class={s.link}>Хочу быть волонтером</div>
         </div>
-        <div class={s.cardBoard}><Participants /></div>
+        <div class={s.cardBoard}>
+          <div class={`${s.cardColor2} ${s.cardTag}`}>Волонтеры</div>
+          <Participants />
+        </div>
         
       </div>
     );
