@@ -17,7 +17,7 @@ class ParticipantsStore {
                 "fields": "photo_200",
                 "v":"5.101",
                 "group_id": "187019586", 
-                "access_token":"your_token"
+                "access_token":"IGCVaVmWRbpQJxnmegNt"
             }
         }
     ).then(({ data }) => {
