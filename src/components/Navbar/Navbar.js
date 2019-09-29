@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router';
+import connect from '@vkontakte/vk-connect';
 import Event from './event.svg';
 import Man from './man.svg';
 import News from './news.svg';
@@ -17,6 +18,17 @@ class Navbar extends Component {
     this.removeCss();
   }
 
+  qrInit() {
+    connect
+      .sendPromise('VKWebAppOpenQR')
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <nav class={s.root} >
@@ -32,9 +44,9 @@ class Navbar extends Component {
         <Link href='/account' class={s.item} activeClassName={s.active}>
           <Person /><div>Личный кабинет</div>
         </Link>
-        <Link href='/future' class={s.item} activeClassName={s.active}>
+        <div onClick={this.qrInit} class={s.item} activeClassName={s.active}>
           <QRcode /><div>QR-код</div>
-        </Link>
+        </div>
       </nav>
     );
   }
